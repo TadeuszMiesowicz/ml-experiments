@@ -1,2 +1,4 @@
 algorithm_id,hyperparameter_name,best_value
 1,n_neighbors,18
+2,C,10
+2,solver,lbfgs

@@ -71,7 +71,7 @@ def get_classification_metrics(y_test, y_pred, cv, algorithm_id, algorithm_name)
 
 def save_results(dfs, algorithm_id):
     file_names = ['income_cv_scores.csv', 'income_best_params.csv',
-                  'income_classification_metrics.csv']
+                  'income_algorithms.csv']
     for index, file_name in enumerate(file_names):
         df = pd.read_csv(f'./{file_name}')
         df = df[df["algorithm_id"] != algorithm_id]
@@ -81,9 +81,9 @@ def save_results(dfs, algorithm_id):
 
 def results_to_csv(dfs, algorithm_id):
     file_names = ['income_cv_scores.csv', 'income_best_params.csv',
-                  'income_classification_metrics.csv']
+                  'income_algorithms.csv']
     for index, file_name in enumerate(file_names):
-        path = f'./results/{file_name}'
+        path = f'../results/{file_name}'
         df = pd.read_csv(path)
         df = df[df["algorithm_id"] != algorithm_id]
         df = pd.concat([df, dfs[index]], ignore_index=True)
