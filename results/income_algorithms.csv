@@ -1,0 +1,2 @@
+id,algorithm_name,best_accuracy,precision,recall,roc_auc_score,true_positives,false_positives,false_negatives,true_negatives
+1,knn,0.8421424975820142,0.7084967320261438,0.5717299578059072,0.7501506931886679,5798,446,812,1084

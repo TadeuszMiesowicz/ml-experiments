@@ -1,0 +1,30 @@
+name: rebuild db
+on: push
+
+jobs:
+  # Label of the runner job
+  runner-job:
+    # You must use a Linux environment when using service containers or container jobs
+    runs-on: ubuntu-latest
+
+    env:
+      POSTGRES_HOST: ${{  secrets.POSTGRES_HOST }}
+      POSTGRES_PORT: ${{  secrets.POSTGRES_PORT }}
+      POSTGRES_USER: ${{  secrets.POSTGRES_USER }}
+      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD}}
+      DATABASE: ${{ secrets.DATABASE}}
+
+    steps:
+      # Downloads a copy of the code in your repository before running CI tests
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update Income Algorithms
+        run: node ./scripts/updateIncomeAlgorithms.js
+      - name: Update Income Best Params
+        run: node ./scripts/updateBestParams.js
+      - name: Update Income CV Scores
+        run: node ./scripts/updateCVScores.js
