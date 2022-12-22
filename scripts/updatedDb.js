@@ -3,7 +3,7 @@ require("dotenv").config();
 const fastcsv = require("fast-csv");
 const fs = require("fs");
 
-async function updateDb(csv_path, query, rebuildDb = false) {
+async function updateDb(csv_path, query, idleTimeoutMillis, connectionTimeoutMillis, rebuildDb = false) {
   const stream = fs.createReadStream(csv_path);
   const csvData = [];
   let csvStream = fastcsv
@@ -21,8 +21,8 @@ async function updateDb(csv_path, query, rebuildDb = false) {
         user: process.env.POSTGRES_USER,
         password: process.env.POSTGRES_PASSWORD,
         database: process.env.DATABASE,
-        idleTimeoutMillis: 95000,
-        connectionTimeoutMillis: 95000,
+        idleTimeoutMillis,
+        connectionTimeoutMillis,
       });
 
       pool.connect(async (err, client, done) => {
