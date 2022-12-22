@@ -21,8 +21,8 @@ async function updateDb(csv_path, query, rebuildDb = false) {
         user: process.env.POSTGRES_USER,
         password: process.env.POSTGRES_PASSWORD,
         database: process.env.DATABASE,
-        idleTimeoutMillis: 60000,
-        connectionTimeoutMillis: 60000,
+        idleTimeoutMillis: 95000,
+        connectionTimeoutMillis: 95000,
       });
 
       pool.connect(async (err, client, done) => {
