@@ -9,3 +9,7 @@ SVM = 'support_vector_machines'
 SVM_ID = 3
 DECISION_TREE = 'decision_tree'
 DECISION_TREE_ID = 4
+RANDOM_FOREST = 'random_forest'
+RANDOM_FOREST_ID = 5
+XGB = 'xgb'
+XGB_ID = 6
