@@ -19,17 +19,16 @@ My test results are similar to Baseline Model Performance:
 
 *xgboost* also has the best accuracy in my tests
 
-
-#### SQL database & static site generation
+#### SQL database 
 
 Each time changes are added to the main branch of this repository, github action: 
 - rebuilds a small postgres SQL database containing the test results.
-- webpage `miesowicz.com` rebuilds using data from DB - www is using [SvelteKit](https://kit.svelte.dev/) with static site generation
 
+#### Static site generation SSG with comparison results
 
-#### www with comparison results
+Page `miesowicz.com` is generated ([SvelteKit](https://kit.svelte.dev/) with SSG - static site generation) using data from created database.
 
-Charts and a summary of the tests also can be found on
+Charts and a summary of the tests can be found:
 [miesowicz.com/binary-test](https://miesowicz.com/binary-test)
 
 ---
