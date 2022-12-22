@@ -5,6 +5,7 @@ KNN = 'knn'
 KNN_ID = 1
 LOG_REG = 'logistic_regression'
 LOG_REG_ID = 2
-SVM = 'Support Vector Machines'
+SVM = 'support_vector_machines'
 SVM_ID = 3
-
+DECISION_TREE = 'decision_tree'
+DECISION_TREE_ID = 4
