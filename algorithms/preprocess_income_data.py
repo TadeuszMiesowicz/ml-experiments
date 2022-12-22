@@ -66,7 +66,7 @@ def preprocess_data():
         'hours-per-week'
     ]
 
-    ohe = OneHotEncoder(handle_unknown='ignore')
+    ohe = OneHotEncoder(handle_unknown='ignore', sparse=False)
     scaler = StandardScaler()
 
     ct = ColumnTransformer([

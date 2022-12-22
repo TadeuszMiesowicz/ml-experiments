@@ -15,7 +15,6 @@ async function updateDb(csv_path, query, rebuildDb = false) {
       // remove the first line: header
       csvData.shift();
 
-      // create a new connection to the database
       const pool = new Pool({
         host: process.env.POSTGRES_HOST,
         port: process.env.POSTGRES_PORT,
