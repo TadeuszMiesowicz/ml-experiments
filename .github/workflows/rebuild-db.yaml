@@ -2,7 +2,7 @@ name: rebuild db
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   # Label of the runner job
