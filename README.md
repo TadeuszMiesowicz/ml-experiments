@@ -1,6 +1,6 @@
 # ml-experiments
 
-## binary classification algorithms comparison
+## comparison of binary classification algorithms 
 
 A *test of performance* of ML algorithms for *binary* classification.
 The code associated with the training of each algorithm can be accessed in the algorithms folder.
@@ -14,21 +14,22 @@ Algorithm are trained on Census Income Data Set
 Predict whether income exceeds $50K/yr based on census data. Also known as "Census Income" dataset.
 
 
-My test results are similar to Baseline Model Performance:
+My ML training results are similar to Baseline Model Performance:
 [data set](https://archive-beta.ics.uci.edu/dataset/2/adult)
 
-*xgboost* also has the best accuracy in my tests
+also in my ML training *xgboost* has the best accuracy
 
-#### SQL database 
+#### SQL database & static site generation
 
-Each time changes are added to the main branch of this repository, github action: 
-- rebuilds a small postgres SQL database containing the test results.
+Each time changes are added to the main branch of this repository github action: 
+rebuilds a small postgres SQL database containing the training results.
 
-#### Static site generation SSG with comparison results
+Webpage `miesowicz.com` makes use of data from database for SSG (static site generation) with [SvelteKit](https://kit.svelte.dev/) .
 
-Page `miesowicz.com` is generated ([SvelteKit](https://kit.svelte.dev/) with SSG - static site generation) using data from created database.
 
-Charts and a summary of the tests can be found:
+#### www with comparison results
+
+Charts and a summary of the training results also can be found on
 [miesowicz.com/binary-test](https://miesowicz.com/binary-test)
 
 ---
