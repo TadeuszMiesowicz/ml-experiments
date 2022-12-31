@@ -30,7 +30,7 @@ Webpage `miesowicz.com` makes use of data from database for SSG (static site gen
 #### www with comparison results
 
 Charts and a summary of the training results also can be found on
-[miesowicz.com/binary-test](https://miesowicz.com/binary-test)
+[miesowicz.com/ml-performance](https://miesowicz.com/ml-performance)
 
 ---
 
