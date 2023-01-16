@@ -7,6 +7,11 @@ from sklearn.compose import ColumnTransformer
 
 
 def create_train_test_df():
+    """create train and data sets
+
+    Returns:
+        (DataFrame, DataFrame): train_df, test_df
+    """    
     with open('../ds/adult.names') as fp:
         cols = [sre.group('colname') for line in fp
                 if (sre := re.match(r'(?P<colname>[a-z\-]+):.*\.', line))]
@@ -23,6 +28,14 @@ def create_train_test_df():
 
 
 def preprocess_data():
+    """ Preprocess data for training. 
+        Create tuple of features and labels prepared for training & validation.
+
+    Returns:
+        (ndarray, ndarray, ndarray, ndarray, ndarray, ndarray):
+        X_train, X_test, X_val, y_train, y_val, y_test
+    """
+
     train_df, test_df = create_train_test_df()
 
     VAL_SET_SIZE = get_val_size(test_df)

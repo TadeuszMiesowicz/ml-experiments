@@ -6,6 +6,15 @@ from sklearn.metrics import confusion_matrix, classification_report, precision_s
 
 
 def remove_algorithm_name(algorithm_name, str):
+    """remove algorithm name from string
+
+    Args:
+        algorithm_name (str):
+        str (str):
+
+    Returns:
+        str
+    """
     return re.sub(f"{algorithm_name}", "", str)
 
 
